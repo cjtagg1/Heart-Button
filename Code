@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount1) {
+            localStorage.clickcount1 = Number(localStorage.clickcount1)+1;
+        } else {
+            localStorage.clickcount1 = 1;
+        }
+        document.getElementById("result").innerHTML = "❤ " + localStorage.clickcount1 + "";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+<body>
+  <p><button onclick="clickCounter()" type="button">❤ HEART</button></p>
+<font size="6"><div id="result"></div><br>
+<body>
